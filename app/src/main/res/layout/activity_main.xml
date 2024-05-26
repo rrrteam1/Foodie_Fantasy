@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:elevation="5dp"
+        android:id="@+id/main_top_cl_id"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/main_tv_page_title_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/times_new_roman"
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/main_iv_logout_btn_id"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_logout"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/main_tv_user_mail_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            app:layout_constraintBottom_toBottomOf="@+id/main_iv_logout_btn_id"
+            app:layout_constraintEnd_toStartOf="@+id/main_iv_logout_btn_id"
+            app:layout_constraintTop_toTopOf="@+id/main_iv_logout_btn_id" />
+
+        <TextView
+            android:id="@+id/main_tv_user_name_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintBottom_toTopOf="@+id/main_tv_user_mail_id"
+            app:layout_constraintEnd_toEndOf="@+id/main_tv_user_mail_id" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:elevation="0.1dp"
+        android:id="@+id/main_frag_container_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/main_bottom_ll_id"
+        android:layout_below="@id/main_top_cl_id">
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/main_bottom_ll_id"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/main_bottom_nav_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/menu"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

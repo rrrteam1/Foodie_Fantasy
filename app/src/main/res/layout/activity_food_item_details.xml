@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/secrete_screen_id"
+    tools:context=".View.FoodItemDetails">
+    <FrameLayout
+        android:id="@+id/dtls_top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+        <LinearLayout
+            android:elevation="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/gradient_bg"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:clickable="true"
+                    android:id="@+id/dtls_iv_food_back_btn_id"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/back_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:id="@+id/dtls_iv_food_fav_id"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_fav_gray"
+                    android:layout_marginRight="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:elevation="0.01dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/dtls_iv_food_img_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/food"
+                    android:scaleType="centerCrop"
+                    />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/dtls_middle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/dtls_top"
+        android:layout_above="@id/dtls_bottom"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:nestedScrollingEnabled="true"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <FrameLayout
+                    android:layout_gravity="right|top"
+                    android:id="@+id/dtls_fl_food_offer_bg_id"
+                    android:layout_width="wrap_content"
+                    android:visibility="visible"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cat_item_offer_bg" />
+
+                    <TextView
+                        android:id="@+id/dtls_tv_food_offer_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/times_new_roman"
+                        android:text="10% off"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="22dp" />
+
+                </FrameLayout>
+                <TextView
+                    android:id="@+id/dtls_tv_food_title_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Chicken Fried Rice"
+                    android:fontFamily="@font/times_new_roman"
+                    android:textColor="@color/black"
+                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/dtls_tv_food_price_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/times_new_roman"
+                        android:text="$15.00"
+                        android:textColor="@color/green_1"
+                        android:textSize="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/dtls_tv_food_actual_price_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/times_new_roman"
+                        android:gravity="center_vertical"
+                        android:text="$15.00"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/gray_3"
+                        android:textSize="25dp"
+
+                        app:layout_constraintBottom_toBottomOf="@+id/dtls_tv_food_price_id"
+                        app:layout_constraintStart_toEndOf="@+id/dtls_tv_food_price_id"
+                        app:layout_constraintTop_toTopOf="@+id/dtls_tv_food_price_id" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:orientation="horizontal"
+                        >
+
+                        <LinearLayout
+                            android:clickable="true"
+                            android:id="@+id/dtls_ll_food_cart_minus_id"
+                            android:elevation="0.55dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/cart_minus_button_bg"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/icon_minus" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:elevation="0.1dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:background="@color/gray"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center">
+
+
+
+                            <TextView
+                                android:id="@+id/dtls_tv_food_cart_qnt_id"
+                                android:paddingRight="10dp"
+                                android:paddingLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/times_new_roman"
+                                android:text="1"
+                                android:textColor="@color/black"
+                                android:textSize="30dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:clickable="true"
+                            android:id="@+id/dtls_ll_food_cart_plus_id"
+                            android:elevation="0.5dp"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/cart_plus_button_bg"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/icon_plus" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/times_new_roman"
+                        android:text="Description"
+                        android:textColor="@color/black"
+                        android:textSize="25dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:nestedScrollingEnabled="true"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/dtls_tv_food_desc_id"
+                                    android:paddingRight="10dp"
+                                    android:paddingLeft="10dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/times_new_roman"
+                                    android:text="Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+                                    android:textColor="@color/gray_4"
+                                    android:textSize="18dp"/>
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/dtls_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:clickable="true"
+            android:id="@+id/dtls_cl_magic_bg_id"
+            android:layout_width="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/dtls_item_cost_bg"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/dtls_tv_food_total_count_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/times_new_roman"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/times_new_roman"
+                android:text="items"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/dtls_tv_food_total_count_id"
+                app:layout_constraintStart_toEndOf="@+id/dtls_tv_food_total_count_id"
+                app:layout_constraintTop_toTopOf="@+id/dtls_tv_food_total_count_id" />
+
+
+            <TextView
+                android:id="@+id/dtls_tv_food_total_cost_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/times_new_roman"
+                android:text="$0.00"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/black"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/dtls_ll_food_add_to_cart_btn_id"
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:background="@drawable/dtls_item_add_to_cart_btn_bg"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/times_new_roman"
+                android:text="Add to Cart"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "149903576889",
+    "project_id": "restuarant-a40e8",
+    "storage_bucket": "restuarant-a40e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149903576889:android:2e519d342d02ebea3022e8",
+        "android_client_info": {
+          "package_name": "com.raja.resturant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_9yqxb_BgAYRzBbjJx-n8rCPAEjqWxUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
